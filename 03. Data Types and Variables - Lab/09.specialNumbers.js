@@ -1,6 +1,13 @@
 function specialNumbers(num) {
-  for (i = 1; i <= num; i++) {
-    if (i % 5 === 0 || i % 7 === 0 || i % 11 === 0) {
+  for (let i = 1; i <= num; i++) {
+    let tempNum = i;
+    let sum = 0;
+    while (tempNum > 0) {
+      sum += tempNum % 10;
+      tempNum = Math.floor(tempNum / 10);
+    }
+
+    if (sum === 5 || sum === 7 || sum === 11) {
       console.log(`${i} -> True`);
     } else {
       console.log(`${i} -> False`);
@@ -8,4 +15,4 @@ function specialNumbers(num) {
   }
 }
 
-specialNumbers(15);
+specialNumbers(20);
