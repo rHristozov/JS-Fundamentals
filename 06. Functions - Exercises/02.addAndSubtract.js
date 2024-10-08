@@ -1,13 +1,13 @@
 function addAndSubtract(numOne, numTwo, numThree) {
-  let sum = (numberOne, numberTwo) => {
+  function sum(numOne, numTwo) {
     return numOne + numTwo;
-  };
-  let subtract = (sum, numThree) => {
+  }
+  function subtract(sum, numThree) {
     return sum - numThree;
-  };
-  sum(numOne, numTwo);
-
-  console.log(subtract);
+  }
+  let sumOf = sum(numOne, numTwo);
+  let result = subtract(sumOf, numThree);
+  console.log(result);
 }
 
 addAndSubtract(23, 6, 10);
